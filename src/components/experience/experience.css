@@ -1,0 +1,206 @@
+/* Base Styles */
+.sectionExperience {
+  overflow: visible;
+  margin: 20vh auto;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.section-xp {
+  background-image: url("../../assets/fontXp.svg") !important;
+  background-repeat:no-repeat !important;
+  background-size:100% !important;
+  background-position: 80% 90% !important;
+}
+
+.section-span {
+  background-image: url("../../assets/fontMention.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+
+.fill {
+  width: 10px;
+  height: 100vh;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Box Styles */
+.e-left,
+.e-left-2,
+.e-right {
+  background-color: #1c1c1c; /* Fond sombre des cartes */
+  height: auto;
+  border-radius: 20px;
+  width: 30%;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.e-left:hover,
+.e-left-2:hover,
+.e-right:hover {
+  transform: translateY(-10px);
+  background-color: #222; /* Couleur de fond au survol */
+}
+
+.e-left-2,
+.e-right {
+  color: #ccc; /* Texte plus clair */
+}
+
+/* Text Styles */
+.experience-title {
+  text-align: center;
+  font-family: "Unbounded", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.experienceTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.experience-years {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.experience-description {
+  color: #ccc; /* Texte plus clair */
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  text-transform: capitalize;
+  padding: 0 1rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Image Styles */
+.experience-img {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.img-xp {
+  width: 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.img-xp:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  
+
+  .section-span {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .e-left,
+  .e-left-2,
+  .e-right {
+    width: 80%;
+    margin-top: 20px;
+    box-shadow: none;
+  }
+
+  .fill {
+    height: 50vh;
+    width: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionExperience {
+    background-size: cover;
+  }
+
+  .e-left,
+  .e-left-2,
+  .e-right {
+    width: 90%;
+  }
+
+  .e-left-2,
+  .e-right {
+    margin-top: 20px;
+  }
+
+  .fill {
+    height: 30vh;
+  }
+
+  .span-button,
+  .span-button-1 {
+    transform: translate(0);
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .section-xp {
+    background-image: url(/ACtech/src/assets/fontMention.svg) !important;
+    background-repeat: repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+      }
+
+      .section-mention {
+        background-color: #4b308c;
+        background-image: none !important;
+      }
+          .e-left,
+  .e-left-2,
+  .e-right {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .experience-img {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .img-xp {
+    width: 60px;
+  }
+
+  .fill {
+    height: 20vh;
+  }
+}

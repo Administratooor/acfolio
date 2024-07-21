@@ -1,0 +1,82 @@
+.project-main {
+  background-image: url("../../assets/fontProject.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.project-title {
+  color: rgb(255, 255, 255);
+  margin: 0 30px;
+  margin-top: 120px;
+  padding: 30px;
+  font-size: 2.3em;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.project-description {
+  color: rgb(241, 241, 241);
+  font-family: "Unbounded", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 20px 50px;
+  font-size: medium;
+  width: 55%;
+  margin: 10vh auto;
+}
+
+.highlight-text {
+  background: linear-gradient(to right, #ffffff, #00fffb, #00ff95);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.project-list {
+  display: flex;
+  padding: 30px;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.project-item {
+  width: 90%;
+}
+
+@media screen and (max-width: 767px) {
+  .project-main {
+    background-image: none;
+    background-color: #4b308c;
+  }
+
+  .project-title {
+    font-size: 1.8em;
+  }
+  
+  .project-container {
+    width: 90% !important;
+  }
+
+  .project-description {
+    width: 90%;
+    font-size: medium;
+    margin: 20px auto;
+  }
+
+  .project-list {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .project-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
