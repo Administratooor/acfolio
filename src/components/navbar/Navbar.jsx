@@ -6,10 +6,8 @@ export default function Navbar() {
   return (
     <nav className="nav-links">
       <div className="navbar-link">
-        <div>
+      
         <img src={ac} alt="" srcset="" />
-
-        </div>
 
         <a href="#main">Home</a>
         <a href="#realisations">Work</a>

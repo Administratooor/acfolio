@@ -1,0 +1,6 @@
+# Autoriser tous les robots à explorer tout le contenu
+User-agent: *
+Allow: /
+
+# Spécifiez le chemin vers le sitemap
+Sitemap: https://acfolio.fr

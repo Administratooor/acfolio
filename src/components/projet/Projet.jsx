@@ -1,12 +1,12 @@
 
 import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
-import OhMyFood from "../../assets/gif/ohmyfood.gif";
+import OhMyFood from "../../assets/gif/ohmyfood.mp4";
 import booki from "../../assets/gif/booki.png";
-import kanap from "../../assets/gif/kanap.gif";
-import kasa from "../../assets/gif/kasa.gif";
-import panthere from "../../assets/gif/panthere.gif";
-import piquante from "../../assets/gif/piquante.gif";
+import kanap from "../../assets/gif/kanap.mp4";
+import kasa from "../../assets/gif/kasa.mp4";
+import panthere from "../../assets/gif/panthere.mp4";
+import piquante from "../../assets/gif/piquante.mp4";
 
 export default function Projet() {
   const images = [

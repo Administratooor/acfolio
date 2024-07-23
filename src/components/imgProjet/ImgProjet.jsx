@@ -10,7 +10,9 @@ const ImageScroller = ({ images }) => {
           <div key={i} className="project-card">
             <div className="project-card-top">
               <h3>{elementProjet[i].projetName}</h3>
-              <img className="project-image" src={img} alt={`Projet ${elementProjet[i].projetName}`} />
+              {/* <video autoPlay className="project-image" src={img} alt={`Projet ${elementProjet[i].projetName}`} /> */}
+              <video autoPlay loop muted className="project-image">
+          <source src={img} type="video/mp4" /></video>
               <div className="project-details">
                 <div className="projet-details-elements">
                    <div className="project-icons">

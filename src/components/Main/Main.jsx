@@ -53,9 +53,9 @@ export default function Main() {
     <div className="home-container">
       <div className="content-wrapper" id="main">
         <div className="left-panel">
-          <Section>
-            <img src={profil} className="profile-image" alt="Profil de Anthony C" />
-          </Section>
+          {/* <Section> */}
+            <img rel="preload" src={profil} className="profile-image" alt="Profil de Anthony C" />
+          {/* </Section> */}
         </div>
         <div className="right-panel">
           <div className="right-content">
@@ -65,7 +65,8 @@ export default function Main() {
               <a className="social-button" href="https://github.com/Administratooor">
                 Github
               </a>
-              <a className="social-button linkedin-button" href="www.linkedin.com/in/AC-Tech
+              <a className="social-button linkedin-button" href="linkedin.com/in/ac-tech
+
 ">
                 Linkedin
               </a>

@@ -22,7 +22,6 @@ const elementProjet = [
     icon1: htmlIcon,
     icon2: cssIcon,
     icon3: figmaIcon,
-    photo: "path/to/booki.png",
     githubLink: "https://github.com/Administratooor",
 
   },
@@ -36,7 +35,6 @@ const elementProjet = [
     icon1: htmlIcon,
     icon2: scssIcon,
     icon3: "",
-    photo: "path/to/kanap.gif",
     githubLink: "https://github.com/Administratooor/Ohmyfood_P3.git",
   },
   {
@@ -48,7 +46,6 @@ const elementProjet = [
     icon: githubIcon,
     icon1: seoIcon,
     icon2: accessibiliteIcon,
-    photo: "path/to/panthere.gif",
     githubLink: "https://github.com/Administratooor/AgenceLaPanthere.git",
 
   },
@@ -61,7 +58,6 @@ const elementProjet = [
     icon: githubIcon,
     icon1: javascriptIcon,
     icon2: kanapIcon,
-    photo: "path/to/ohmyfood.gif",
     githubLink: "https://github.com/Administratooor/KanapP5.git",
 
   },
@@ -74,7 +70,6 @@ const elementProjet = [
     icon: githubIcon,
     icon1: bddIcon,
     icon2: nodeIcon,
-    photo: "path/to/piquante.gif",
     githubLink: "https://github.com/Administratooor/Anthony59170-Piiquante_P6.git",
    
   },
