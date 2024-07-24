@@ -3,10 +3,10 @@ import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
 import OhMyFood from "../../assets/gif/Ohmyfood.webm";
 // import booki from "../../assets/gif/booki.webm";
-import kanap from "../../assets/gif/kanap.webm";
-import kasa from "../../assets/gif/kasa.webm";
-import panthere from "../../assets/gif/panthere.webm";
-import piquante from "../../assets/gif/piquante.webm";
+import kanap from "../../assets/gif/Kanap.webm";
+import kasa from "../../assets/gif/Kasa.webm";
+import panthere from "../../assets/gif/Panthere.webm";
+import piquante from "../../assets/gif/Piquante.webm";
 
 export default function Projet() {
   const images = [
