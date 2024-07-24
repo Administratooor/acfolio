@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
         </div>
         
-        <img className="ac" src={ac} alt="" srcset="" />
+        <img className="ac" src={ac} alt="" />
       </div>
     </footer>
   );

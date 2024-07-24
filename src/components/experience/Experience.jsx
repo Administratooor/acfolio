@@ -45,9 +45,9 @@ export default function Experience() {
               Technicien système et réseau/Developpement web JS
             </p>
             <div className="experience-img">
-              <img className="img-xp" src={ag2r} alt="" srcset="" />
-              <img className="img-xp" src={sicoval} alt="" srcset="" />
-              <img className="img-xp" src={gasb} alt="" srcset="" />
+              <img className="img-xp" src={ag2r} alt="" />
+              <img className="img-xp" src={sicoval} alt="" />
+              <img className="img-xp" src={gasb} alt="" />
             </div>
           </div>
           <div className="e-left-2">
@@ -57,9 +57,9 @@ export default function Experience() {
               Manager/Gestionnaire/Formateur
             </p>
             <div className="experience-img">
-              <img className="img-xp" src={fursac} alt="" srcset="" />
-              <img className="img-xp" src={intimissimi} alt="" srcset="" />
-              <img className="img-xp" src={devred} alt="" srcset="" />
+              <img className="img-xp" src={fursac} alt="" />
+              <img className="img-xp" src={intimissimi} alt="" />
+              <img className="img-xp" src={devred} alt=""  />
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function Experience() {
               Chef d'équipe/Soldat/Démineur du génie
             </p>
             <div className="experience-img">
-              <img className="img-xp" src={rg} alt="" srcset="" />
+              <img className="img-xp" src={rg} alt=""  />
             </div>
           </div>
         </Section>

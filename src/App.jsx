@@ -5,11 +5,12 @@ import Experience from "./components/experience/Experience";
 import Form from "../src/components/form/Form";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+
 function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Main></Main>
+      <Main defer></Main>
       <Projet></Projet>
       <Experience></Experience>
       <Form></Form>

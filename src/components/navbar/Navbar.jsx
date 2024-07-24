@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="nav-links">
       <div className="navbar-link">
       
-        <img src={ac} alt="" srcset="" />
+        <img src={ac} alt="" />
 
         <a href="#main">Home</a>
         <a href="#realisations">Work</a>

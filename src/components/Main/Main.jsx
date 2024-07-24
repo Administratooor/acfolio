@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
 import "../Main/main.css";
-import profil from "../../assets/profilHome.png";
+import profil from "../../assets/profilHome.webp";
 import arrow from "../../assets/arrow.png";
 
 function Section({ children }) {
@@ -54,7 +54,7 @@ export default function Main() {
       <div className="content-wrapper" id="main">
         <div className="left-panel">
           {/* <Section> */}
-            <img rel="preload" src={profil} className="profile-image" alt="Profil de Anthony C" />
+            {/* <img src={profil} className="profile-image" alt="Profil de Anthony C" /> */}
           {/* </Section> */}
         </div>
         <div className="right-panel">
