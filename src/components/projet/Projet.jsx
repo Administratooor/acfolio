@@ -10,7 +10,7 @@ import piquante from "../../assets/gif/Piquante.webm";
 
 export default function Projet() {
   const images = [
-    booki,
+    // booki,
     OhMyFood,
     panthere,
     kanap,
