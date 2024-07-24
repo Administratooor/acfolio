@@ -18,13 +18,10 @@
 
 .project-description {
   color: rgb(241, 241, 241);
-  font-family: "Unbounded", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  margin: 20px 50px;
-  font-size: large;
-  width: 55%;
-  margin: 10vh auto;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+    width: 80%;
+    margin: 10vh auto;
 }
 
 .highlight-text {
