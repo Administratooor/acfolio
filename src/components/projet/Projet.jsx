@@ -1,7 +1,7 @@
 
 import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
-import OhMyFood from "../../assets/gif/ohmyfood.webm";
+import OhMyFood from "../../assets/gif/Ohmyfood.webm";
 // import booki from "../../assets/gif/booki.webm";
 import kanap from "../../assets/gif/kanap.webm";
 import kasa from "../../assets/gif/kasa.webm";
