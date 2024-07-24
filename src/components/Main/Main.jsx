@@ -53,9 +53,9 @@ export default function Main() {
     <div className="home-container">
       <div className="content-wrapper" id="main">
         <div className="left-panel">
-          {/* <Section> */}
-            {/* <img src={profil} className="profile-image" alt="Profil de Anthony C" /> */}
-          {/* </Section> */}
+          <Section>
+            <img src={profil} className="profile-image" alt="Profil de Anthony C" />
+          </Section>
         </div>
         <div className="right-panel">
           <div className="right-content">

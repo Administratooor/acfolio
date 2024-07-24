@@ -12,19 +12,19 @@ import accessibiliteIcon from "../../assets/assetsContact/accessibilite.png";
 import githubIcon from "../../assets/assetsContact/github.png";
 
 const elementProjet = [
-  {
-    id: "1",
-    projetName: "Booki",
-    text1: "Intégrer du contenu conformément à une maquette.",
-    text2: "Implémenter une interface responsive",
-    text3: "Découpage maquette",
-    icon: githubIcon,
-    icon1: htmlIcon,
-    icon2: cssIcon,
-    icon3: figmaIcon,
-    githubLink: "https://github.com/Administratooor",
+  // {
+  //   id: "1",
+  //   projetName: "Booki",
+  //   text1: "Intégrer du contenu conformément à une maquette.",
+  //   text2: "Implémenter une interface responsive",
+  //   text3: "Découpage maquette",
+  //   icon: githubIcon,
+  //   icon1: htmlIcon,
+  //   icon2: cssIcon,
+  //   icon3: figmaIcon,
+  //   githubLink: "https://github.com/Administratooor",
 
-  },
+  // },
   {
     id: "2",
     projetName: "OhMyFood",
