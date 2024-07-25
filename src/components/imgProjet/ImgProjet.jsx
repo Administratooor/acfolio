@@ -9,9 +9,9 @@ const ImageScroller = ({ images }) => {
         {images.map((img, i) => (
           <div key={i} className="project-card">
             <div className="project-card-top">
-              <h3>{elementProjet[i].projetName}</h3>
+              <h2>{elementProjet[i].projetName}</h2>
               {/* <video autoPlay className="project-image" src={img} alt={`Projet ${elementProjet[i].projetName}`} /> */}
-              <video autoPlay loop muted className="project-image">
+              <video autoPlay loop muted track="Project Caption" className="project-image">
           <source src={img} type="video/mp4" /></video>
               <div className="project-details">
                 <div className="projet-details-elements">
