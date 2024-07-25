@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import "../Main/main.css";
 import profil from "../../assets/profilHome.webp";
 import arrow from "../../assets/arrow.png";
+import github from "../../assets/assetsContact/github.png"
 
 function Section({ children }) {
   const ref = useRef(null);
@@ -62,8 +63,9 @@ export default function Main() {
             <p>ANTHONY C</p>
             <h1>{displayedText}</h1>
             <div className="button-group">
-              <a className="social-button" href="https://github.com/Administratooor">
-                Github
+              <a className="social-button" href="https://github.com/Administratooor">Github<img src={github} className="icon" alt="github Link" />
+              
+                
               </a>
               <a className="social-button linkedin-button" href="linkedin.com/in/ac-tech
 
