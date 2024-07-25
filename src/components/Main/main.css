@@ -110,24 +110,24 @@
 
 .social-button {
   background: -webkit-linear-gradient(to right, #3231310f, #00ffe0c4);
-    background: linear-gradient(to right, #3231310f, #00ffe0c4);
-    border: none;
-    padding: 20px;
-    width: 20%;
-    border-radius: 5px;
-    color: #fffafa;
-    text-decoration: none;
-    font-family: "Unbounded", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1em;
-    font-optical-sizing: auto;
-    transition: all 0.3s;
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
+  background: linear-gradient(to right, #3231310f, #00ffe0c4);
+  border: none;
+  padding: 20px;
+  width: 20%;
+  border-radius: 5px;
+  color: #fffafa;
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1em;
+  font-optical-sizing: auto;
+  transition: all 0.3s;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
 }
 
 .social-button:hover {
@@ -184,8 +184,9 @@
     font-size: 2.4em;
   }
   .profile-image {
-    width: 270px;
-  }
+    width: 165px;
+    height: 240px;
+       }
   .animated-section {
     height: 300px;
     margin-left: 20%;
@@ -201,6 +202,7 @@
   }
   .arrow-icon {
     width: 30px;
+    height: 30px;
     margin-top: 10%;
   }
 }
