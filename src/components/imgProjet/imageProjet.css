@@ -29,7 +29,6 @@
 .project-card:hover {
   transform: translateY(-5px);
   background: linear-gradient(to right, #465ad9, #00fffb, #7500e3);
-
   box-shadow: 0 8px 16px rgba(70, 70, 70, 0.2);
 }
 

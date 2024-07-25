@@ -134,7 +134,7 @@
 
 .social-button:hover {
   background: #0000000f ;
-
+  color: #ffffff;
   border: none;
   box-shadow: 2px 2px 10px rgb(159, 159, 159);
 }
