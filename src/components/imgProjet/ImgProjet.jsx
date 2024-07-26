@@ -11,7 +11,7 @@ const ImageScroller = ({ images }) => {
             <div className="project-card-top">
               <h2>{elementProjet[i].projetName}</h2>
               {/* <video autoPlay className="project-image" src={img} alt={`Projet ${elementProjet[i].projetName}`} /> */}
-              <video controls preload="none" autoPlay loop muted track="Project Caption" className="project-image">
+              <video preload="none" autoPlay loop muted track="Project Caption" className="project-image">
           <source src={img} type="video/mp4" /></video>
               <div className="project-details">
                 <div className="projet-details-elements">
