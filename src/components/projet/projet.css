@@ -1,8 +1,7 @@
 .project-main {
   background-image: url("../../assets/fontProject.svg");
   background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
+  background-size: contain;
 }
 
 .project-title {
@@ -19,9 +18,9 @@
 .project-description {
   color: rgb(241, 241, 241);
     font-family: "Roboto", sans-serif;
-    font-size: large;
-    width: 80%;
-    margin: 10vh auto;
+    font-size: larger;
+    width: 70%;
+    margin: 0vh 15vh;
 }
 
 .highlight-text {

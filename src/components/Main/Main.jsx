@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useInView } from "framer-motion";
 import "../Main/main.css";
-import profil from "../../assets/profilHome.webp";
+import profil from "../../assets/profilHome.png";
 import arrow from "../../assets/arrow.png";
 import github from "../../assets/assetsContact/github.png"
 
