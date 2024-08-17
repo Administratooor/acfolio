@@ -35,6 +35,7 @@ const elementProjet = [
     icon1: htmlIcon,
     icon2: scssIcon,
     icon3: "",
+    class :"projetCard",
     githubLink: "https://github.com/Administratooor/Ohmyfood_P3.git",
   },
   {
@@ -46,6 +47,7 @@ const elementProjet = [
     icon: githubIcon,
     icon1: seoIcon,
     icon2: accessibiliteIcon,
+    class :"projetCard1",
     githubLink: "https://github.com/Administratooor/AgenceLaPanthere.git",
 
   },
@@ -57,7 +59,8 @@ const elementProjet = [
     text3: "Validation des données",
     icon: githubIcon,
     icon1: javascriptIcon,
-    icon2: kanapIcon,
+    icon2: kanapIcon,    
+    class :"projetCard2",
     githubLink: "https://github.com/Administratooor/KanapP5.git",
 
   },
@@ -70,6 +73,7 @@ const elementProjet = [
     icon: githubIcon,
     icon1: bddIcon,
     icon2: nodeIcon,
+    class :"projetCard3",
     githubLink: "https://github.com/Administratooor/Anthony59170-Piiquante_P6.git",
    
   },
@@ -83,6 +87,7 @@ const elementProjet = [
     icon1: javascriptIcon,
     icon2: frameworkIcon,
     photo: "path/to/kasa.gif",
+    class :"projetCard4",
     githubLink: "https://github.com/Administratooor/P7-Kasa-.git",
   },
 ];

@@ -5,10 +5,10 @@ import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
 import OhMyFood from "../../assets/gif/Ohmyfood.webm";
 // import booki from "../../assets/gif/booki.webm";
-import kanap from "../../assets/gif/Kanap.webm";
-import kasa from "../../assets/gif/Kasa.webm";
-import panthere from "../../assets/gif/Panthere.webm";
-import piquante from "../../assets/gif/Piquante.webm";
+import kanap from "../../assets/gif/kanap.png";
+import kasa from "../../assets/gif/kasa.svg";
+import panthere from "../../assets/gif/laPanthere.png";
+import piquante from "../../assets/gif/piiquante.png";
 
 export default function Projet() {
   const images = [
@@ -57,7 +57,6 @@ export default function Projet() {
         attrayantes à la gestion de la logique serveur.
       </p>
     <Section>
-
        <ImageScroller images={images} />
     </Section>
      
