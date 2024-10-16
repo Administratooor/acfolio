@@ -44,7 +44,7 @@ export default function Projet() {
       <h1 id="realisations" className="project-title">
         MY WORKS
       </h1>
-      <p className="project-description">
+      {/* <p className="project-description">
         Un court résumé des différents projets que j'ai pu réaliser. En tant que
         <span className="highlight-text"> développeur Fullstack</span>, j'ai réalisé une variété de projets qui
         démontrent mes compétences en <span className="highlight-text">JavaScript</span>, tant pour le <span className="highlight-text">frontend</span> que pour
@@ -55,7 +55,7 @@ export default function Projet() {
         l'efficacité des systèmes</span>. Mon expertise en JavaScript me permet de
         créer des solutions complètes, de la conception d'interfaces utilisateur
         attrayantes à la gestion de la logique serveur.
-      </p>
+      </p> */}
     <Section>
        <ImageScroller images={images} />
     </Section>
