@@ -22,23 +22,18 @@
 .e-left,
 .e-left-2,
 .e-right {
-  background-color: #1c1c1c; /* Fond sombre des cartes */
-  height: auto;
-  border-radius: 20px;
-  width: 30%;
-  margin: 30px;
+  background-color: #0e0e0e;
+  width: 100%;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #64603b;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.623); /* Ombre plus prononcée */
-  transition: transform 0.3s, background-color 0.3s;
+  border: 1px solid #000000;
+  box-shadow: 0 2px 10px #D9C6AE;
 }
 
 .e-left:hover,
 .e-left-2:hover,
 .e-right:hover {
-  transform: translateY(-10px);
   background-color: #222; /* Couleur de fond au survol */
 }
 
@@ -50,10 +45,12 @@
 /* Text Styles */
 .experience-title {
   text-align: center;
-  font-family: "Unbounded", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
   font-size: 2rem;
-  color: #fff;
   margin-bottom: 2rem;
+  color: #D9C6AE;
 }
 
 .experienceTitle {

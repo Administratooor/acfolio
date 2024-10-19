@@ -27,7 +27,9 @@ function RecommendationCard({ author, role, company, text }) {
         <img className="stars" src={stars} alt="Stars" />
       </div>
       <h4>{role} chez {company}</h4>
+      <div className="recommendation-block-div">
       <p className="recommendation-block" dangerouslySetInnerHTML={{ __html: text }} />
+      </div>
     </div>
   );
 }
@@ -82,8 +84,6 @@ export default function Recommendation() {
     <Section>
       <div className="recommendation-img">
         <h2 className="accommodation-p">MENTION</h2>
-
-        <div className="recommendation-img-div">
           {recommendations.map((rec, index) => (
             <RecommendationCard
               key={index}
@@ -94,7 +94,6 @@ export default function Recommendation() {
             />
           ))}
         </div>
-      </div>
     </Section>
   );
 }
