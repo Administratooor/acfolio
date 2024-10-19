@@ -14,19 +14,20 @@ const ImageScroller = ({ images }) => {
               <img src={img} className="project-image" alt="" srcset="" />
               <div className="project-details">
                 <div className="projet-details-elements">
-                   <div className="project-icons">
+                  <div className="project-icons">
                     <img className="icon" src={elementProjet[i].icon} alt="" />
                     <img className="icon" src={elementProjet[i].icon1} alt="" />
                     <img className="icon" src={elementProjet[i].icon2} alt="" />
+                  </div>
+                  <p>{elementProjet[i].text1}</p>
+                  <p>{elementProjet[i].text2}</p>
+                  <p>{elementProjet[i].text3}</p>
+                  <button className="github-button">
+                    <a href={elementProjet[i].githubLink}>GitHub</a>
+                  </button>
+
                 </div>
-                <p>{elementProjet[i].text1}</p>
-                <p>{elementProjet[i].text2}</p>
-                <p>{elementProjet[i].text3}</p>
-                <button>
-                  <a href={elementProjet[i].githubLink} className="github-button">GitHub</a>
-                </button>
-                </div>
-               
+
               </div>
             </div>
           </div>

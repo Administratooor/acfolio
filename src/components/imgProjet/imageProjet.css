@@ -10,18 +10,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  width: 50%;
+  gap: 30px;
+  width: 70%;
   
 }
 
 .project-card {
-  
   background-color: rgba(0, 0, 0, 0.236);
   border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.988);
   overflow: hidden;
-  transition: all 0.3s ease;
   width: 300px;
 }
 
@@ -30,13 +27,13 @@
 .project-card:hover {
   transform: translateY(-5px);
   background: linear-gradient(to right, #0e0e0e, #0e0e0e, #0e0e0e);
-  box-shadow: 0 8px 16px rgba(70, 70, 70, 0.2);
+  box-shadow: 0 -10px 25px #d9c6ae33;
 }
 
 .project-card-top {
   background-color: #0e0e0e;
   border: 1px solid #D9C6AE;
-  padding: 5px;
+  padding: 20px;
 }
 
 .project-card h2 {
@@ -49,16 +46,21 @@
 
 .project-details {
   display: none;
-  padding: 1rem;
   background-color: #202020f1;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 90%;
-  height: 90%;
-  transition: opacity 0.3s ease;
+  width: 99%;
+  height: 99%;
+  padding: 3px;
+
+}
+
+.projet-details-elements{
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  gap: 10px;
 }
 
 .project-card:hover .project-details {
@@ -68,55 +70,54 @@
 .project-icons {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  padding: 15px;
+
 }
 
 .icon {
   width: 30px;
   height: 30px;
   margin-right: 10px;
-  filter: brightness(0) saturate(50%) invert(54%) sepia(37%) saturate(9678%) hue-rotate(1654deg) brightness(100%) contrast(101%);
+  filter: brightness(0.9) saturate(150%) invert(50%) sepia(30%) hue-rotate(10deg) contrast(95%);
 }
 
 .project-details p {
   font-family: "Rajdhani", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.5;
   color: #d6d6d6;
   margin: 0;
+  padding-left: 3px;
+  padding-right: 3px;
 
 }
-
 .project-details button {
-  width: 100%;
-  margin-top: 20px;
-  background-color: #D9C6AE;
-  color: #0e0e0e;
-  border: none;
-  padding: 10px 20px;
+  width: 30%;
+  margin-top: 10px;
+  background-color: #0e0e0e56;
+  color: #D9C6AE;
+  padding: 10px 0;
   border-radius: 5px;
   font-family: "Unbounded", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   border: #ffffff4f 1px solid;
 }
 
 .project-details button:hover {
-  background-color: #0e0e0e;
-
+  background-color: #D9C6AE;
+  color: #0E0E0E;
 }
-.project-details button a{
-text-decoration: none;
-color: #0e0e0e;
 
+.project-details button a {
+  text-decoration: none;
+  color: inherit; /* Utilise la couleur héritée du bouton */
 }
-.project-details button a:hover{
 
-color: #ffffff;
+.project-details button:hover a {
+  color:#0E0E0E; /* Change la couleur du lien au survol du bouton */
 }
+
 
 .project-image {
   width: 100%;
