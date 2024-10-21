@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import stars from "../../assets/recommendation/stars.png";
-import "./recommendation.css"; // Assurez-vous que votre fichier CSS est correctement importé
+import "./recommendation.css";
 
 function Section({ children }) {
   const ref = useRef(null);
@@ -16,20 +16,19 @@ function Section({ children }) {
   );
 }
 
-function RecommendationCard({ author, role, company, text }) {
+function RecommendationCard({ author, role, company, text, animationClass }) {
   return (
-    <div className="recommendation-card">
+    <div className={`recommendation-card ${animationClass}`}>
       <div className="recommendation-card-header">
-        <div className="header-recommendation">
-          <p>Author</p>
-          <h3>{author}</h3>
-        </div>
+
+      </div>
+      <div className="header-recommendation recommendation-block">
+        <p className="recommendation-author" >{author}</p>
+        <h3 className="recommendation-role ">{role} chez {company}</h3>
+        <p className="recommendation-p" dangerouslySetInnerHTML={{ __html: text }} />
         <img className="stars" src={stars} alt="Stars" />
       </div>
-      <h4>{role} chez {company}</h4>
-      <div className="recommendation-block-div">
-      <p className="recommendation-block" dangerouslySetInnerHTML={{ __html: text }} />
-      </div>
+
     </div>
   );
 }
@@ -80,20 +79,23 @@ export default function Recommendation() {
     },
   ];
 
+  const animationClasses = ['scroll-left', 'scroll-right', 'scroll-left'];
+
   return (
     <Section>
       <div className="recommendation-img">
-        <h2 className="accommodation-p">MENTION</h2>
-          {recommendations.map((rec, index) => (
-            <RecommendationCard
-              key={index}
-              author={rec.author}
-              role={rec.role}
-              company={rec.company}
-              text={rec.text}
-            />
-          ))}
-        </div>
+        <h2 className="experience-title">MENTION</h2>
+        {recommendations.map((rec, index) => (
+          <RecommendationCard
+            key={index}
+            author={rec.author}
+            role={rec.role}
+            company={rec.company}
+            text={rec.text}
+            animationClass={animationClasses[index]}
+          />
+        ))}
+      </div>
     </Section>
   );
 }

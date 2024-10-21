@@ -7,10 +7,12 @@
   background-position: center;
 }
 
-section span {
-  display: block;
-  transform: translateX(-100px);
-  opacity: 0;
+.section-content {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-content.visible {
+  opacity: 1;
 }
 
 .recommendation-img {
@@ -18,95 +20,88 @@ section span {
   margin-top: 10vh;
 }
 
-.accommodation-p {
-  color: rgb(255, 255, 255);
-  margin: 0 70px;
-  font-size: 1.3em;
-  font-family: "Unbounded", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
 
 .recommendation-card {
-  width: 200%; 
+  position: relative;
+  overflow: hidden;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 10vh;
+  animation: scroll-left 30s linear infinite; /* Exemple, ajustez selon votre classe */
+}
+
+.recommendation-card:hover {
+  animation-play-state: paused; /* Met l'animation en pause au survol */
 }
 
 .recommendation-card-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .header-recommendation {
-  display: flex;
-  align-items: center;
-  gap: 10%;
-}
-
-.header-recommendation > p {
-  text-align: center;
-  margin: 0;
-}
-
-.header-recommendation h3 {
-  margin: 0;
-  font-family: "Unbounded", sans-serif;
-  font-weight: 500;
-  font-size: medium;
-  width: 120px;
-}
-
-h4 {
-  color: #ffffff;
-  margin-bottom: 30px;
-  font-family: "Unbounded", monospace;
-  font-weight: 300;
-  font-size: 14px;
-}
-
-.recommendation-img p {
-  font-family: "Rajdhani", sans-serif;
-  color: #0e0e0e;
-  font-weight: 400;
-  font-size: 20px;
-  margin: 0;
-  padding: 20px;
-  border-radius: 2px;
-  background-color: #D9C6AE;
+  background-color: #000000af;
 }
 
 .recommendation-block {
-  background-color: #0e0e0e !important;
-  color: #D9C6AE !important;
-}
-
-
-.recommendation-block{
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-}
-
-.recommendation-block{
   display: inline-block;
-  animation: scroll 30s linear infinite;
+  width: 30%;
+  color: #D9C6AE;
+  border: 2px solid #2b2b2b;
+  box-shadow: 8px 2px  20px rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 30px;
 }
 
-@keyframes scroll {
+.recommendation-author {
+  font-family: "Rajdhani", sans-serif;
+  color: #0e0e0e;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 30%;
+  font-size: x-large;
+  font-weight: 600;
+  background-color: #D9C6AE;
+}
+
+.recommendation-role {
+  font-family: "Unbounded", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  text-decoration:underline;
+  font-size: small;
+  font-weight: 100;
+}
+
+.recommendation-p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.1rem;
+}
+
+.scroll-left {
+  animation: scroll-left 15s linear infinite;
+}
+
+.scroll-right {
+  animation: scroll-right 10s linear infinite;
+}
+
+@keyframes scroll-left {
   0% {
-      transform: translateX(100%);
+    transform: translateX(80%) ;
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-80%);
   }
 }
 
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(80%);
+  }
+}
 
 .stars {
   width: 60px;
@@ -128,10 +123,5 @@ h4 {
   .recommendation-card {
     width: 90%;
     margin-bottom: 20px;
-  }
-
-  .header-recommendation > p {
-    width: auto;
-    padding: 5px 10px;
   }
 }
