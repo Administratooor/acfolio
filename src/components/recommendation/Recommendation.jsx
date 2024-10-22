@@ -1,15 +1,32 @@
-import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import stars from "../../assets/recommendation/stars.png";
 import "./recommendation.css";
 
 function Section({ children }) {
   const ref = useRef(null);
-  const { ref: inViewRef, entry } = useInView({ threshold: 0.3, triggerOnce: true });
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("down");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
 
   return (
     <section className="section-mention" ref={ref}>
-      <div ref={inViewRef} className={`section-content ${entry?.isIntersecting ? 'visible' : ''}`}>
+      <div className={`section-content ${scrollDirection === "down" ? 'open' : 'close'}`}>
         {children}
       </div>
     </section>
@@ -19,16 +36,13 @@ function Section({ children }) {
 function RecommendationCard({ author, role, company, text, animationClass }) {
   return (
     <div className={`recommendation-card ${animationClass}`}>
-      <div className="recommendation-card-header">
-
-      </div>
+      <div className="recommendation-card-header"></div>
       <div className="header-recommendation recommendation-block">
-        <p className="recommendation-author" >{author}</p>
-        <h3 className="recommendation-role ">{role} chez {company}</h3>
+        <p className="recommendation-author">{author}</p>
+        <h3 className="recommendation-role">{role} chez {company}</h3>
         <p className="recommendation-p" dangerouslySetInnerHTML={{ __html: text }} />
         <img className="stars" src={stars} alt="Stars" />
       </div>
-
     </div>
   );
 }

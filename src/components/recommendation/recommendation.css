@@ -8,11 +8,20 @@
 }
 
 .section-content {
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform-origin: top; /* Origine de la transformation en haut */
 }
 
-.section-content.visible {
+.section-content.open {
   opacity: 1;
+  transform: scaleY(1); /* L'élément se déplie */
+}
+
+.section-content.close {
+  opacity: 0;
+  transform: scaleY(0); /* L'élément se plie */
 }
 
 .recommendation-img {
@@ -20,25 +29,27 @@
   margin-top: 10vh;
 }
 
-
 .recommendation-card {
   position: relative;
   overflow: hidden;
   padding: 20px;
   margin-bottom: 10vh;
-  animation: scroll-left 30s linear infinite; /* Exemple, ajustez selon votre classe */
-}
-
-.recommendation-card:hover {
-  animation-play-state: paused; /* Met l'animation en pause au survol */
-}
-
-.recommendation-card-header {
-  display: flex;
 }
 
 .header-recommendation {
   background-color: #000000af;
+  animation: animate-in 20s forwards;
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    clip-path: inset(50% 0% 50% 0%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
+  }
 }
 
 .recommendation-block {
@@ -46,7 +57,7 @@
   width: 30%;
   color: #D9C6AE;
   border: 2px solid #2b2b2b;
-  box-shadow: 8px 2px  20px rgb(0, 0, 0);
+  box-shadow: 8px 2px 20px rgb(0, 0, 0);
   border-radius: 20px;
   padding: 30px;
 }
@@ -67,7 +78,7 @@
   font-family: "Unbounded", sans-serif;
   color: #ffffff;
   margin: 0;
-  text-decoration:underline;
+  text-decoration: underline;
   font-size: small;
   font-weight: 100;
 }
@@ -77,32 +88,6 @@
   font-size: 1.1rem;
 }
 
-.scroll-left {
-  animation: scroll-left 15s linear infinite;
-}
-
-.scroll-right {
-  animation: scroll-right 10s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(80%) ;
-  }
-  100% {
-    transform: translateX(-80%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-80%);
-  }
-  100% {
-    transform: translateX(80%);
-  }
-}
-
 .stars {
   width: 60px;
   height: 20px;
@@ -110,8 +95,13 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 767px) {
-  .accommodation-p {
-    font-size: 2em;
+  .recommendation-author {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .recommendation-p {
+    font-size: 1.2rem;
   }
 
   .recommendation-img-div {
@@ -123,5 +113,10 @@
   .recommendation-card {
     width: 90%;
     margin-bottom: 20px;
+  }
+
+  .recommendation-block {
+    width: 90%;
+    padding: 20px;
   }
 }
