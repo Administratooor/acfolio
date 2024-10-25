@@ -34,7 +34,7 @@ function Section({ children }) {
 export default function Experience() {
   return (
     <>
-      <div>
+      {/* <div>
 
         <Section className="experience">  
           <h2 className="experience-title">MY STORY</h2>
@@ -74,7 +74,7 @@ export default function Experience() {
             </div>
           </div>
         </Section>
-      </div>
+      </div> */}
       <Recommendation />
     </>
   );

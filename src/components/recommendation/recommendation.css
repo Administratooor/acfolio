@@ -1,32 +1,44 @@
 .section-mention {
   width: 100%;
   overflow: hidden;
-  background-image: url(/ACtech/src/assets/fontMention.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-content {
   opacity: 0;
-  transform: scaleY(0);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  transform-origin: top; /* Origine de la transformation en haut */
+  min-height: 0; /* Utilise min-height au lieu de height */
+  max-height: 0; /* Commence avec une hauteur de 0 */
+  transition: opacity 0.1s ease-in-out, max-height 0.1s ease-in-out;
+  overflow: hidden; /* Cache le contenu en dehors de la zone visible */
 }
 
 .section-content.open {
   opacity: 1;
-  transform: scaleY(1); /* L'élément se déplie */
+  max-height: 100px; /* Une hauteur suffisante pour contenir le contenu */
 }
 
 .section-content.close {
   opacity: 0;
-  transform: scaleY(0); /* L'élément se plie */
+  max-height: 0; /* Retourne à une hauteur de 0 */
 }
 
 .recommendation-img {
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 1vh;
+  min-height: 20px; /* Ajustez cette valeur selon votre contenu */
+  overflow: hidden; /* Évitez que le contenu déborde */
+}
+
+/* Styles de la barre de défilement */
+::-webkit-scrollbar {
+  width: 10px; /* Largeur de la barre de défilement */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8d8d; /* Couleur de la barre de défilement */
+  border-radius: 4px; /* Arrondir la barre de défilement */
 }
 
 .recommendation-card {
@@ -37,14 +49,14 @@
 }
 
 .header-recommendation {
-  background-color: #000000af;
-  animation: animate-in 20s forwards;
+  background-color: rgba(0, 0, 0, 0.68); /* Couleur noire avec opacité */
+  animation: animate-in 2s backwards;
 }
 
 @keyframes animate-in {
   from {
     opacity: 0;
-    clip-path: inset(50% 0% 50% 0%);
+    clip-path: inset(20% 0% 50% 0%);
   }
   to {
     opacity: 1;
@@ -57,7 +69,7 @@
   width: 30%;
   color: #D9C6AE;
   border: 2px solid #2b2b2b;
-  box-shadow: 8px 2px 20px rgb(0, 0, 0);
+  box-shadow: 8px 2px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 30px;
 }
@@ -102,12 +114,6 @@
 
   .recommendation-p {
     font-size: 1.2rem;
-  }
-
-  .recommendation-img-div {
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
   }
 
   .recommendation-card {
