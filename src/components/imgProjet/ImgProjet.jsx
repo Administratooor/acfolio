@@ -19,9 +19,12 @@ const ImageScroller = ({ images }) => {
                     <img className="icon" src={elementProjet[i].icon1} alt="" />
                     <img className="icon" src={elementProjet[i].icon2} alt="" />
                   </div>
-                  <p>{elementProjet[i].text1}</p>
+                  <div className="project-text">
+                    <p>{elementProjet[i].text1}</p>
                   <p>{elementProjet[i].text2}</p>
                   <p>{elementProjet[i].text3}</p>
+                  </div>
+                  
                   <button className="github-button">
                     <a href={elementProjet[i].githubLink}>GitHub</a>
                   </button>

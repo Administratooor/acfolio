@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 
 import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
@@ -25,16 +25,18 @@ export default function Projet() {
     const isInView = useInView(ref, { once: true });
   
     return (
-      <section className="" ref={ref}>
-        <span
-          style={{
-            transform: isInView ? "none" : "translate(0, 400px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
+      <section ref={ref}>
+        <motion.div
+  initial={{ opacity: 0, rotateY: 180 }}
+  animate={{ opacity: isInView ? 1 : 0, rotateY: isInView ? 0 : 180 }}
+  transition={{
+    duration: 1.5,
+    ease: "easeInOut",
+            
           }}
         >
           {children}
-        </span>
+        </motion.div>
       </section>
     );
   }
@@ -56,10 +58,9 @@ export default function Projet() {
         créer des solutions complètes, de la conception d'interfaces utilisateur
         attrayantes à la gestion de la logique serveur.
       </p>
-    <Section>
-       <ImageScroller images={images} />
-    </Section>
-     
+      <Section>
+        <ImageScroller images={images} />
+      </Section>
     </main>
   );
 }
