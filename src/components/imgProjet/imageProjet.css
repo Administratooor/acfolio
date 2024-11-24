@@ -1,140 +1,84 @@
-.scroller-container {
-
-}
-
 .scroller-content {
+  width: 45%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  width: 100%;
-  
+  gap: 10px;
 }
 
 .project-card {
-  width: 300px;
-  transition: 1s all;
-}
-
-
-
-.project-card:hover {
-  transform: translateY(15px);
-
-}
-
-.project-card-top {
-  background-color: #0e0e0e;
-  border: 1px solid #292929;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.project-card h2 {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #D9C6AE;
-  text-align: center;
-}
-
-.project-details {
-  display: none;
-  background-color: #0f0f0fe5;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  border:1px solid #D9C6AE ;
-}
-
-.projet-details-elements{
-  display: flex;
-  flex-direction:column ;
-  align-items: center;
-  gap: 10px;
-
-}
-
-.project-card:hover .project-details {
-  display: block; /* Affiché lors du survol */
-}
-
-.project-icons {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-
-}
-
-.project-text {
-  padding: 13px;
-  text-align: left;
-}
-
-
-.icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  filter: brightness(0.9) saturate(150%) invert(50%) sepia(30%) hue-rotate(10deg) contrast(95%);
-}
-
-.project-details p {
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 400;
-  color: #ffffff;
-  margin: 0;
-  padding-left: 3px;
-  padding-right: 3px;
-
-}
-.project-details button {
-  width: 30%;
-  margin-top: 10px;
-  background-color: #0e0e0e56;
-  color: #D9C6AE;
-  padding: 10px 0;
-  border-radius: 5px;
-  font-family: "Unbounded", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border: #ffffff4f 1px solid;
-}
-
-.project-details button:hover {
-  background-color: #D9C6AE;
-  color: #0E0E0E;
-}
-
-.project-details button a {
-  text-decoration: none;
-  color: inherit; /* Utilise la couleur héritée du bouton */
-}
-
-.project-details button:hover a {
-  color:#0E0E0E; /* Change la couleur du lien au survol du bouton */
+  position: relative;
+  margin-bottom: 80px;
+  width: 40%;
+  height: 250px;
 }
 
 
 .project-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-details {
+
+  border-radius:0 0 2px 2px ;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.projet-details-elements{
+  background-color: #191715;
+  padding: 30px;
+  height: 170px;
+  transition: all 0.3s;
+}
+
+.projet-details-elements:hover {
+box-shadow: #1a1a1acb 0px -10px 10px ;
+}
+
+h2 {
+  font-size: large;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: larger;
+}
+
+.github-button a {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  text-decoration: none;
+}
+
+.github-button {
+  padding: 5px 15px;
   width: 100%;
-  height: 200px;
-  border-radius: 20px;}
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color:#191715;
+  font-family: "Rajdhani", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size:large;
+}
 
-@media screen and (max-width: 767px) {
-  .scroller-content {
-    justify-content: flex-start;
-    padding: 0 10px;
-  }
+.github-button:hover {
+  background-color:   #d4ab69;
 
-  .project-card {
-    width: 100%;
-    margin-bottom: 20px;
-    height: auto; /* Pour s'adapter dynamiquement au contenu */
-  }
+}
+
+.project-text p {
+  margin: 5px 0;
+  color: #ffcf83;
+  font-family: "Rajdhani", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size:medium;
 }

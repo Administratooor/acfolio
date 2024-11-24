@@ -1,101 +1,100 @@
-/* Base Styles */
-.sectionExperience {
-  overflow: visible;
-  margin: 20vh auto;
-  color: #fff;
-  padding: 100px 0;
+/* General Layout */
+.container {
+  padding: 20px;
   text-align: center;
-  background: url("../../assets/fontExperience.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.section-span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #2b2b2b; /* Fond sombre */
+  color: #fff;
 }
 
 /* Card Styles */
-.experience-container {
+.cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px; /* Espacement entre les cartes */
+  margin-top: 20px;
+}
+
+.container {
+  overflow: hidden;
+  font-size: xx-large;
+}
+
+.project-card {
+  background-color: #1c1c1c; /* Fond sombre pour chaque carte */
+  border-radius: 20px;
+  padding: 20px;
+  width: 30%; /* Chaque carte prend 30% de la largeur de la ligne */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  text-align: center;
 }
 
-.experience-card {
-  width: 90%;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #000000;
-  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
-  backdrop-filter: blur(5px); /* Optional for modern look */
+.project-card:hover {
+  transform: translateY(-20px);
 }
 
-/* Text Styles */
-.experience-title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 100;
+.card-header {
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #D9C6AE;
+  color: #d4ab69; /* Couleur dorée */
+  margin-bottom: 10px;
 }
 
-.experienceTitle {
-  color: #D9C6AE;
-  font-family: "Unbounded", sans-serif;
+.card-content {
+  margin-top: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.2rem;
-  text-align: center;
+  color: #ffffff;
+  margin: 10px 0;
+  font-family: "Rajdhani", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size:large;
 }
 
-.experience-years {
-  font-family: "Unbounded", sans-serif;
-  font-weight: 400;
+.card-description {
   font-size: 1rem;
-  color: #aaa;
-  margin-bottom: 1rem;
+  color: #d4ab69;
+  margin-bottom: 20px;
+  font-family: "Rajdhani", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size:large;
 }
 
-.experience-description {
-  color: #ccc;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  margin: 0;
-  text-transform: capitalize;
-  text-align: center;
+.card-link {
+  display: inline-block;
+  background-color: #d4ab69; /* Couleur dorée du bouton */
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-size:large;
 }
 
-/* Image Styles */
-.experience-img {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
+.card-link:hover {
+  background-color: #ff9e2c; /* Changement de couleur au survol */
 }
 
-.img-xp {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.img-xp:hover {
-  transform: scale(1.1);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .experience-card {
-    width: 90%;
-  }
-  .experience-img {
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .cards-wrapper {
     flex-direction: column;
+    align-items: center;
   }
-  .img-xp {
-    width: 60px;
+
+  .project-card {
+    width: 80%;
+    margin-bottom: 20px;
   }
 }

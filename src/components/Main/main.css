@@ -17,23 +17,15 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 100;
   position: relative;
-  color: #D9C6AE;
+  color: #d4ab69;
   font-size: 5rem;
   margin: 0;
 }
 
-h2 {
-  font-size: large;
-  color: #d9c6aea1;
-  margin: 0;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .main p {
   margin: 0;
-  color: #D9C6AE;
+  color: #d4ab69;
   font-size: 2rem;
   font-family: "Rajdhani", sans-serif;
 }
@@ -53,7 +45,7 @@ h2 {
   border-radius: 50px;
   padding: 10px;
   background-color: #0e0e0ee8;
-  border-top: 2px solid #D9C6AE; 
+  border-top: 2px solid #d4ab69; 
   transition: all 0.2s;
   margin-top: 20px;
 }

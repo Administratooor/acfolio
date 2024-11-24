@@ -1,26 +1,42 @@
 .project-main {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-around;
 }
-
-.project-title {
-  color: #D9C6AE;
-  margin: 0 30px;
-  margin-top: 120px;
-  padding: 30px;
-  font-size: 2em;
+.project-main-realisation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.realisation-number span {
+  display: flex;
+  color: #d4ab69;
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+}
+.realisation-number p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d4ab69;
+  margin: 0;
+  font-size: 1em;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
 }
 
-.project-description {
-  width: 40%;
-  color: #9b8c79;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 400;
-  font-size: large;
+.project-title {
+  color: #ffffff;
+  margin: 0 30px;
+  margin-top: 120px;
+  padding: 30px;
+  font-size: 3em;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
 }
 
 

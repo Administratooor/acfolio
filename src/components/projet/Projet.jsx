@@ -1,66 +1,88 @@
-import { useRef } from "react";
-import { useInView, motion } from "framer-motion";
-
 import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
-import OhMyFood from "../../assets/gif/Ohmyfood.webm";
-// import booki from "../../assets/gif/booki.webm";
-import kanap from "../../assets/gif/kanap.png";
-import kasa from "../../assets/gif/kasa.svg";
-import panthere from "../../assets/gif/laPanthere.png";
-import piquante from "../../assets/gif/piiquante.png";
+import { motion } from 'framer-motion'; // Importer Framer Motion
+import { useState, useEffect, useRef } from 'react'; // Importer useState, useEffect et useRef
 
 export default function Projet() {
-  const images = [
-    // booki,
-    OhMyFood,
-    panthere,
-    kanap,
-    piquante,
-    kasa
-  ];
+  const [count, setCount] = useState(0); // Utilisation du state pour le compteur
+  const [isVisible, setIsVisible] = useState(false); // Etat pour savoir si l'élément est visible
+  const counterRef = useRef(null); // Référence pour l'élément du compteur
 
-  function Section({ children }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-  
-    return (
-      <section ref={ref}>
-        <motion.div
-  initial={{ opacity: 0, rotateY: 180 }}
-  animate={{ opacity: isInView ? 1 : 0, rotateY: isInView ? 0 : 180 }}
-  transition={{
-    duration: 1.5,
-    ease: "easeInOut",
-            
-          }}
-        >
-          {children}
-        </motion.div>
-      </section>
-    );
-  }
+  useEffect(() => {
+    // Création de l'observateur pour détecter l'entrée dans la vue
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        // Quand l'élément entre dans la vue, on lance l'animation
+        setIsVisible(true);
+      }
+    }, { threshold: 0.5 }); // Le seuil de visibilité de 50% de l'élément
+
+    // Commencer à observer l'élément référencé
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    // Nettoyage de l'observateur
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // Si l'élément devient visible, on lance l'animation du compteur
+    if (isVisible) {
+      const timer = setInterval(() => {
+        setCount((prev) => {
+          if (prev < 100) {
+            return prev + 1;
+          }
+          clearInterval(timer); // Arrêter l'intervalle quand on atteint 100
+          return prev;
+        });
+      }, 30); // Intervalle d'animation (20ms entre chaque mise à jour)
+
+      return () => clearInterval(timer); // Nettoyage de l'intervalle si nécessaire
+    }
+  }, [isVisible]); // Déclencher l'animation quand l'élément devient visible
 
   return (
     <main className="project-main">
-      <h3 id="realisations" className="project-title">
-        MY WORKS
-      </h3>
-      <p className="project-description">
-        Un court résumé des différents projets que j'ai pu réaliser. En tant que
-        <span className="highlight-text"> développeur Fullstack</span>, j'ai réalisé une variété de projets qui
-        démontrent mes compétences en <span className="highlight-text">JavaScript</span>, tant pour le <span className="highlight-text">frontend</span> que pour
-        le <span className="highlight-text">backend</span>. J'ai conçu et développé des <span>interfaces web dynamiques et des
-        applications web progressives (PWA)</span> qui offrent une expérience
-        utilisateur <span className="highlight-text">fluide et interactive</span>. En parallèle, j'ai mis en place des
-        backends <span className="highlight-text">robustes et performants</span>, garantissant la <span className="highlight-text">fiabilité et
-        l'efficacité des systèmes</span>. Mon expertise en JavaScript me permet de
-        créer des solutions complètes, de la conception d'interfaces utilisateur
-        attrayantes à la gestion de la logique serveur.
-      </p>
-      <Section>
-        <ImageScroller images={images} />
-      </Section>
+      <div className="project-main-realisation">
+        <h3 id="realisations" className="project-title">
+          MY WORK
+        </h3>
+
+        <div className="realisation-number">
+          <p>Développement Web</p>
+          {/* Affichage dynamique du compteur */}
+          <motion.span
+            ref={counterRef} // Attache la référence à l'élément
+            key="counter"
+          >
+            {count - 92}+ Projets réalisés  {/* Afficher le compteur avec + */}
+          </motion.span>
+        </div>
+        {/* Animation du texte avec framer-motion */}
+        <motion.p
+          initial={{ opacity: 0 }} // Commence avec l'opacité à 0
+          animate={{ opacity: 1 }} // Devient opaque
+          transition={{ duration: 1 }} // Transition pour l'opacité
+        >
+          <div className="realisation-number">
+          <p>Support Informatique</p>
+            <motion.span
+              ref={counterRef} // Attache la référence à l'élément
+              key="counter"
+            >
+              {count + 900}+ Tickets résolus {/* Afficher le compteur avec + */}
+            </motion.span>
+          </div>
+        </motion.p>
+      </div>
+
+      <ImageScroller />
     </main>
   );
 }
