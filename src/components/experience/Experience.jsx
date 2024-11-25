@@ -40,7 +40,7 @@ export default function Main() {
             <span className="card-number">01</span>
           </div>
           <div className="card-content">
-            <p className="card-title">Military Project</p>
+            <p className="card-title">Test project</p>
             <p className="card-description">A detailed description of the military project goes here.</p>
             <a href="https://www.example.com" className="card-link">Visit site</a>
           </div>

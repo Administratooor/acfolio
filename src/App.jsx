@@ -13,7 +13,7 @@ function App() {
       <Main ></Main>
       <Projet></Projet>
       <Experience></Experience>
-      {/* <Form></Form> */}
+      <Form></Form>
       {/* <Footer></Footer> */}
     </>
   );
