@@ -24,7 +24,7 @@
   background-color: #1c1c1c; /* Fond sombre pour chaque carte */
   border-radius: 20px;
   padding: 20px;
-  width: 30%; /* Chaque carte prend 30% de la largeur de la ligne */
+
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
   display: flex;
@@ -68,11 +68,11 @@
   font-size:large;
 }
 
-.card-link {
+.card-number {
   display: inline-block;
   background-color: #d4ab69; /* Couleur dorée du bouton */
   padding: 10px 20px;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;

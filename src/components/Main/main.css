@@ -6,28 +6,39 @@
   justify-content: center;
   margin-bottom: 40vh;
   overflow: hidden;
+  padding: 20px;
+  text-align: center; /* Centrer le contenu pour petits écrans */
 }
 
 .profil {
-  width: 300px;
+  width: 250px; /* Taille ajustée pour responsivité */
+  max-width: 80%;
 }
 
 h1 {
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 100;
-  position: relative;
   color: #d4ab69;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 0;
 }
 
+h1 span {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
 
 .main p {
   margin: 0;
   color: #d4ab69;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Rajdhani", sans-serif;
+}
+
+h2.sub-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-top: 20px;
 }
 
 .content-wrapper {
@@ -40,16 +51,49 @@ h1 {
 }
 
 .arrow {
-  width: 25px;
+  width: 30px;
   filter: hue-rotate(0deg) brightness(0.5);
   border-radius: 50px;
   padding: 10px;
   background-color: #0e0e0ee8;
-  border-top: 2px solid #d4ab69; 
+  border-top: 2px solid #d4ab69;
   transition: all 0.2s;
   margin-top: 20px;
 }
-.arrow:hover{
-  background-color:  #080808;
-  border-top: 2px solid #00000098; 
+
+.arrow:hover {
+  background-color: #080808;
+  border-top: 2px solid #00000098;
+}
+
+/* Responsivité */
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 10px;
+  }
+
+  .profil {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h1 span {
+    font-size: 1rem;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+  }
+
+  h2.sub-text {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    width: 20px;
+    padding: 5px;
+  }
 }

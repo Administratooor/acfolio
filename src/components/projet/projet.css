@@ -1,72 +1,75 @@
 .project-main {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
+  flex-direction: column; /* Modifié pour s'empiler sur petits écrans */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
+
 .project-main-realisation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
-.realisation-number span {
+
+.realisation-container {
   display: flex;
+  flex-direction: row; /* Aligne les items côte à côte par défaut */
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Pour passer en colonne si nécessaire */
+  gap: 20px; /* Espacement entre les items */
+}
+
+.realisation-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+}
+
+.realisation-number span {
   color: #d4ab69;
   font-family: "Raleway", sans-serif;
   font-size: 3em;
 }
+
 .realisation-number p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #d4ab69;
   margin: 0;
   font-size: 1em;
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
 }
 
 .project-title {
   color: #ffffff;
-  margin: 0 30px;
-  margin-top: 120px;
-  padding: 30px;
+  margin: 20px 0;
   font-size: 3em;
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
 }
-
 
 @media screen and (max-width: 767px) {
   .project-main {
-    background-image: none;
-    background-color: #c9b5f8;
+    padding: 10px;
   }
 
   .project-title {
-    font-size: 1.8em;
-  }
-  
-  .project-container {
-    width: 90% !important;
+    font-size: 2em;
+    text-align: center;
   }
 
-  .project-description {
-    width: 90%;
-    font-size: medium;
-    margin: 20px auto;
+  .realisation-container {
+    flex-direction: column; /* Passer en colonne sur mobiles */
+    align-items: center;
   }
 
-  .project-list {
-    flex-direction: column;
-    padding: 20px;
+  .realisation-number span {
+    font-size: 2em;
   }
 
-  .project-item {
-    width: 100%;
-    margin: 10px 0;
+  .realisation-number p {
+    font-size: 1em;
   }
 }
