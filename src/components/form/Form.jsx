@@ -35,7 +35,8 @@ export default function Form() {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="form-container" id="form">
+    <div className="form">
+        <form ref={form} onSubmit={sendEmail} className="form-container" id="form">
       <p className="send">SEND US A MESSAGE</p>
       <div className="form-content">
         <div className="form-group">
@@ -72,5 +73,7 @@ export default function Form() {
         <input className={`submit-btn ${formClick}`} type="submit" value="Send" />
       </div>
     </form>
+    </div>
+  
   );
 }

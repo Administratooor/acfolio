@@ -2,6 +2,7 @@ import "../projet/projet.css";
 import ImageScroller from '../imgProjet/ImgProjet';
 import { motion } from 'framer-motion'; // Importer Framer Motion
 import { useState, useEffect, useRef } from 'react'; // Importer useState, useEffect et useRef
+import computer from "../../assets/computer.png"
 
 export default function Projet() {
   const [count, setCount] = useState(0);
@@ -49,24 +50,25 @@ export default function Projet() {
     <main className="project-main">
       <div className="project-main-realisation">
         <h3 id="realisations" className="project-title">
-          MY WORK
+          WORK
         </h3>
 
         <div className="realisation-container">
           <div className="realisation-number">
             <p>Développement Web</p>
             <motion.span ref={counterRef} key="counter">
-              {count - 92}+ Projets réalisés
+              {count - 92}+ Projets 
             </motion.span>
           </div>
 
           <div className="realisation-number">
             <p>Support Informatique</p>
             <motion.span key="counter">
-              {count + 900}+ Tickets résolus
+              {count + 900}+ Incidents
             </motion.span>
           </div>
         </div>
+        <img src={computer} className="computer" alt="" srcset="" />
       </div>
 
       <ImageScroller />

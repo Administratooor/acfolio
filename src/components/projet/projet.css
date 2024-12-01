@@ -30,21 +30,27 @@
   text-align: center;
 }
 
+.computer {
+  margin: 50px 0 150px 0;
+}
+
 .realisation-number span {
   color: #d4ab69;
-  font-family: "Raleway", sans-serif;
-  font-size: 3em;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 3.5em;
+  font-weight: 100;
 }
 
 .realisation-number p {
   color: #d4ab69;
   margin: 0;
-  font-size: 1em;
-  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
 }
 
 .project-title {
-  color: #ffffff;
+  color: #bababa;
   margin: 20px 0;
   font-size: 3em;
   font-family: "Raleway", sans-serif;

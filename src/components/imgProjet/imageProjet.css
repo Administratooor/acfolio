@@ -8,6 +8,7 @@
 .project-card {
   position: relative;
   margin-bottom: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.182);
 }
 
 
@@ -37,16 +38,15 @@ box-shadow: #1a1a1acb 0px -10px 10px ;
 
 h2 {
   font-size: large;
-  color: #ffffff;
+  color: #bababa;
   margin: 0;
-  font-family: "Rajdhani", sans-serif;
-  font-weight: 600;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-size: larger;
+  font-size: x-large;
 }
 
 .github-button a {
-  color: #ffffff;
+  color: #bababa;
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   text-decoration: none;
@@ -67,15 +67,20 @@ h2 {
 }
 
 .github-button:hover {
-  background-color:   #d4ab69;
+  background-color:   #24221f;
 
 }
 
 .project-text p {
   margin: 5px 0;
-  color: #ffcf83;
+  color: #ffd694;
   font-family: "Rajdhani", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-size:medium;
 }
+
+@media screen and (max-width: 767px) {
+  .scroller-content {
+ width: 90%;
+  }}

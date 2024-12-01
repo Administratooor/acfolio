@@ -1,23 +1,25 @@
 .main {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40vh;
-  overflow: hidden;
-  padding: 20px;
-  text-align: center; /* Centrer le contenu pour petits écrans */
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20vh;
+    overflow: hidden;
+    text-align: center;
 }
 
 .profil {
-  width: 250px; /* Taille ajustée pour responsivité */
+  width: 450px; /* Taille ajustée pour responsivité */
   max-width: 80%;
+}
+
+.name {
+  font-size: 88px;
 }
 
 h1 {
   font-family: "Raleway", sans-serif;
-  font-weight: 100;
   color: #d4ab69;
   font-size: 4rem;
   margin: 0;
@@ -25,18 +27,18 @@ h1 {
 
 h1 span {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #d4ab69;
 }
 
 .main p {
   margin: 0;
   color: #d4ab69;
-  font-size: 1.5rem;
+
   font-family: "Rajdhani", sans-serif;
 }
 
 h2.sub-text {
-  color: #ffffff;
+  color: #bababa;
   font-size: 1.2rem;
   margin-top: 20px;
 }
@@ -51,19 +53,21 @@ h2.sub-text {
 }
 
 .arrow {
-  width: 30px;
-  filter: hue-rotate(0deg) brightness(0.5);
+  width: 20px;
+  filter: hue-rotate(200deg) brightness(5);
   border-radius: 50px;
   padding: 10px;
-  background-color: #0e0e0ee8;
-  border-top: 2px solid #d4ab69;
+  background-color: #131413e8;
+  border: 2px solid #402f14;
   transition: all 0.2s;
   margin-top: 20px;
+  rotate: 180deg;
 }
 
 .arrow:hover {
-  background-color: #080808;
+  filter: hue-rotate(150deg) brightness(2);
   border-top: 2px solid #00000098;
+  rotate: 0deg;
 }
 
 /* Responsivité */
