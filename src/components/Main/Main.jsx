@@ -52,7 +52,7 @@ export default function Main() {
         <a href="#next-section">
           
         <img className="arrow" src={arrow} alt="Scroll Arrow" />
-      </a><p>MES SERVICES</p> </div>
+      </a><span>MES SERVICES</span> </div>
      
     </div>
   );
