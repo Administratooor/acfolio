@@ -37,20 +37,23 @@ export default function Main() {
   return (
     <div className="main">
       <img className="profil" src={profil} alt="Profil" />
-      <Section>
+      <div className="section-main"> <Section>
 
         <p className="name">Anthony C.</p>
         <h1>
-          Development <br />
-          <span> & Web Design </span>   <h2 className="sub-text">
-            Support and creation of websites optimized for SEO
-          </h2>
+          Development
         </h1>
-      </Section>
+        <span> & Web Design </span>
 
-      <a href="#next-section">
+      </Section> <h2 className="sub-text">
+          Support et développeur de site web passioné
+        </h2> 
+        
+        <a href="#next-section">
+          
         <img className="arrow" src={arrow} alt="Scroll Arrow" />
-      </a>
+      </a><p>MES SERVICES</p> </div>
+     
     </div>
   );
 }

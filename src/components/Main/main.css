@@ -1,16 +1,17 @@
 .main {
-    /* height: 90vh; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20vh;
-    overflow: hidden;
-    text-align: center;
+  /* height: 90vh; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20vh;
+  overflow: hidden;
+  text-align: center;
 }
 
 .profil {
-  width: 450px; /* Taille ajustée pour responsivité */
+  width: 450px;
+  /* Taille ajustée pour responsivité */
   max-width: 80%;
 }
 
@@ -19,28 +20,29 @@
 }
 
 h1 {
-  font-family: "Raleway", sans-serif;
-  color: #d4ab69;
-  font-size: 4rem;
+  font-family: "Rajdhani", sans-serif;
+  color: #bababa;
   margin: 0;
 }
 
-h1 span {
-  font-size: 1.5rem;
-  color: #d4ab69;
+.section-main span {
+  color: #bababa;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 900;
 }
 
 .main p {
   margin: 0;
   color: #d4ab69;
-
   font-family: "Rajdhani", sans-serif;
+  font-weight: 100;
 }
 
 h2.sub-text {
   color: #bababa;
   font-size: 1.2rem;
-  margin-top: 20px;
+  font-family: "Raleway", sans-serif;
+  
 }
 
 .content-wrapper {
@@ -73,7 +75,8 @@ h2.sub-text {
 /* Responsivité */
 @media screen and (max-width: 767px) {
   .main {
-    padding: 10px;
+    margin-top: 30vh;
+    flex-direction: column;
   }
 
   .profil {
@@ -81,19 +84,17 @@ h2.sub-text {
   }
 
   h1 {
-    font-size: 2.5rem;
-  }
-
-  h1 span {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .main p {
-    font-size: 1.2rem;
+    font-size: 4rem;
   }
 
   h2.sub-text {
     font-size: 1rem;
+    width: 70%;
+    margin: 20px auto;
   }
 
   .arrow {

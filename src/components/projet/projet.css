@@ -78,4 +78,9 @@
   .realisation-number p {
     font-size: 1em;
   }
+
+  .computer {
+   width: 50%;
+  }
+
 }

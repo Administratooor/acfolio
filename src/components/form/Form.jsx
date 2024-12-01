@@ -37,11 +37,11 @@ export default function Form() {
   return (
     <div className="form">
         <form ref={form} onSubmit={sendEmail} className="form-container" id="form">
-      <p className="send">SEND US A MESSAGE</p>
+      <p className="send">CONTACTEZ MOI</p>
       <div className="form-content">
         <div className="form-group">
           <div className="form-select">
-            <label htmlFor="choice">Choose an option:</label>
+            <label htmlFor="choice">Qui êtes vous ?</label>
             <select name="user_choice" id="choice" className="choice">
               <option className="custom-option" value="Visiteur">Visiteur</option>
               <option className="custom-option" value="Recruteur">Recruteur</option>
@@ -52,23 +52,23 @@ export default function Form() {
         <div className="form-group">
           <label htmlFor="user_name">
             <img className="icon-form" src={peopleIcon} alt="People Icon" />
-            Name:
+            Votre nom :
           </label>
-          <input type="text" name="user_name" id="user_name" placeholder="Enter your name" required />
+          <input type="text" name="user_name" id="user_name" placeholder="Nom " required />
         </div>
         <div className="form-group">
           <label htmlFor="user_email">
             <img className="icon-form" src={emailIcon} alt="Email Icon" />
             Email:
           </label>
-          <input type="email" name="user_email" id="user_email" placeholder="Enter your email" required />
+          <input type="email" name="user_email" id="user_email" placeholder="Email" required />
         </div>
         <div className="form-group">
           <label htmlFor="message">
             <img className="icon-form" src={sendIcon} alt="Message Icon" />
             Message:
           </label>
-          <textarea name="message" id="message" placeholder="Enter your message" required />
+          <textarea name="message" id="message" placeholder="Message" required />
         </div>
         <input className={`submit-btn ${formClick}`} type="submit" value="Send" />
       </div>
