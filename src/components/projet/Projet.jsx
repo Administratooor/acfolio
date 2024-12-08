@@ -55,6 +55,12 @@ export default function Projet() {
 
         <div className="realisation-container">
           <div className="realisation-number">
+            <p>ESN</p>
+            <motion.span ref={counterRef} key="counter">
+              {count - 96}+ clients satisfait
+            </motion.span>
+          </div>
+          <div className="realisation-number">
             <p>Développement Web</p>
             <motion.span ref={counterRef} key="counter">
               {count - 92}+ Projets 
@@ -64,7 +70,7 @@ export default function Projet() {
           <div className="realisation-number">
             <p>Support Informatique</p>
             <motion.span key="counter">
-              {count + 900}+ Incidents
+              {count + 2900}+ Incidents
             </motion.span>
           </div>
         </div>

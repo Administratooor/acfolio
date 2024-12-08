@@ -1,8 +1,11 @@
 /* General Layout */
 .container {
-  padding: 20px;
+  margin: 30px 0;
+  padding: 50px;
   text-align: center;
-  background-color: #2b2b2b; /* Fond sombre */
+  background-image: url("../../assets/fontXp1.svg");
+  background-size: cover;
+  background-position: center;
   color: #bababa;
 }
 

@@ -27,21 +27,21 @@ const ImageScroller = () => {
         >
           <div className="project-card-top">
 
-            
+
             {/* On ne rend plus l'image, mais l'animation et le texte sont conservés */}
             <div className="projet-details-elements">
               <div className="project-icons">
                 {/* <img className="icon" src={projet.icon} alt="icon" />
                 <img className="icon" src={projet.icon1} alt="icon1" />
                 <img className="icon" src={projet.icon2} alt="icon2" /> */}
-                            <h2>{projet.projetName}</h2>
+                <h2>{projet.projetName}</h2>
               </div>
               <div className="project-text">
                 <p>{projet.text1}</p>
                 <p>{projet.text2}</p>
                 <p>{projet.text3}</p>
               </div>
-          
+
             </div>
 
             {/* Animation du texte avec framer-motion */}
@@ -56,9 +56,9 @@ const ImageScroller = () => {
                 duration: 0.3,
                 ease: "easeOut",
               }}
-            > 
-          <button className="github-button">
-                <a href={projet.githubLink}>it's over here </a>
+            >
+              <button className="github-button">
+                <a href={projet.githubLink}>Visit Github </a>
               </button>
               {/* Le contenu du texte est déjà affiché ci-dessus, mais on utilise ici pour l'animation */}
             </motion.div>

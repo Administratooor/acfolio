@@ -47,13 +47,14 @@ export default function Main() {
 
       </Section> <h2 className="sub-text">
           Support et développeur de site web passioné
-        </h2> 
-        
-        <a href="#next-section">
-          
-        <img className="arrow" src={arrow} alt="Scroll Arrow" />
-      </a><span>MES SERVICES</span> </div>
-     
+        </h2>
+
+        <a className="service" href="#next-section">
+          <img className="arrow" src={arrow} alt="Scroll Arrow" />
+          <span>MES SERVICES</span>
+        </a>
+      </div>
+
     </div>
   );
 }
